@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hipertexto - Podcasts</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lora", serif;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #2e8b57; /* Mediterranean green */
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      header h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .podcasts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .podcast {
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .podcast img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+
+      .podcast h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #2e8b57;
+      }
+
+      .podcast p {
+        margin-bottom: 1rem;
+        color: #555;
+      }
+
+      audio {
+        width: 100%;
+        outline: none;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .podcasts {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+
+        .podcast {
+          flex: 1 1 calc(50% - 1.5rem);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .podcast {
+          flex: 1 1 calc(33.333% - 1.5rem);
+        }
+      }
+
+      /* Footer */
+      footer {
+        background-color: #2e8b57;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>hipertexto</h1>
+      <p>Exploring Ideas Through Sound</p>
+    </header>
+
+    <div class="container">
+      <div class="podcasts">
+        <!-- Podcast Entry 1 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+1"
+            alt="Podcast Cover 1"
+          />
+          <h2>Episode 1: The Beginning</h2>
+          <p>
+            Join us as we dive into the origins of hipertexto and what inspired
+            its creation.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Podcast Entry 2 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+2"
+            alt="Podcast Cover 2"
+          />
+          <h2>Episode 2: The Creative Process</h2>
+          <p>
+            Discover the techniques and tools we use to create compelling
+            podcast episodes.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Podcast Entry 3 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+3"
+            alt="Podcast Cover 3"
+          />
+          <h2>Episode 3: Guest Interviews</h2>
+          <p>
+            Listen to insightful conversations with our special guests from
+            various fields.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- End of Podcast Entry 3 -->
+        <!-- Podcast Entry 4 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+3"
+            alt="Podcast Cover 4"
+          />
+          <h2>Episode 4: Guest Interviews</h2>
+          <p>
+            Listen to insightful conversations with our special guests from
+            various fields.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- End of Podcast Entry 4 -->
+        <!-- Podcast Entry 4 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+3"
+            alt="Podcast Cover 4"
+          />
+          <h2>Episode 4: Guest Interviews</h2>
+          <p>
+            Listen to insightful conversations with our special guests from
+            various fields.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- End of Podcast Entry 4 -->
+        <!-- Podcast Entry 4 -->
+        <div class="podcast">
+          <img
+            src="https://via.placeholder.com/600x400.png?text=Podcast+Cover+3"
+            alt="Podcast Cover 4"
+          />
+          <h2>Episode 4: Guest Interviews</h2>
+          <p>
+            Listen to insightful conversations with our special guests from
+            various fields.
+          </p>
+          <audio controls>
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- End of Podcast Entry 4 -->
+        <!-- Add more podcast entries here -->
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 hipertexto. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
