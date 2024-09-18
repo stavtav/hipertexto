@@ -6,7 +6,7 @@
     <title>hipertexto - Podcasts</title>
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&family=Lora&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -19,107 +19,108 @@
 
       body {
         font-family: "Lora", serif;
-        background-color: #f0f4f8;
-        color: #333;
+        background-color: var(--background-color);
+        color: var(--text-color);
         line-height: 1.6;
+        transition: background-color 0.5s, color 0.5s;
       }
 
       /* Variáveis de Cores para Modo Claro (Desértico) */
-        :root {
-          --background-color: #fdf6e3; /* Tom claro quase arenoso */
-          --text-color: #333333;       /* Texto em cinza escuro */
-          --header-footer-bg: #e4c16f; /* Cor inspirada em tons de areia */
-          --card-bg: #ffffff;           /* Fundo branco para os cartões */
-          --card-shadow: rgba(0, 0, 0, 0.1);
+      :root {
+        --background-color: #F2F1EF; /* Tom claro quase arenoso */
+        --text-color: #333333; /* Texto em cinza escuro */
+        --header-footer-bg: #DCD7D3; /* Cor inspirada em tons de areia */
+        --card-bg: #ffffff; /* Fundo branco para os cartões */
+        --card-shadow: rgba(0, 0, 0, 0.1);
       }
 
       /* Variáveis de Cores para Modo Escuro (Carbono) */
-        body.dark-mode {
-          --background-color: #2b2b2b; /* Cinza muito escuro */
-          --text-color: #e0e0e0;       /* Texto em cinza claro */
-          --header-footer-bg: #1c1c1c; /* Fundo quase preto */
-          --card-bg: #3c3c3c;           /* Fundo cinza escuro para os cartões */
-          --card-shadow: rgba(255, 255, 255, 0.1);
+      body.dark-mode {
+        --background-color: #2b2b2b; /* Cinza muito escuro */
+        --text-color: #e0e0e0; /* Texto em cinza claro */
+        --header-footer-bg: #1c1c1c; /* Fundo quase preto */
+        --card-bg: #3c3c3c; /* Fundo cinza escuro para os cartões */
+        --card-shadow: rgba(255, 255, 255, 0.1);
       }
 
       /* Estilos para o Alternador de Tema */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-}
+      .theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+      }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-    margin-right: 10px;
-}
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        margin-right: 10px;
+      }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 24px;
-}
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
 
-input:checked + .slider {
-    background-color: #2196F3;
-}
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
 
-/* Estilo para o ícone de tema */
-#theme-label {
-    font-size: 1.2rem;
-    transition: .4s;
-}
+      /* Estilo para o ícone de tema */
+      #theme-label {
+        font-size: 1.2rem;
+        transition: 0.4s;
+      }
 
-body.dark-mode #theme-label {
-    content: "🌙";
-}
-      
-header {
-    background-color: var(--header-footer-bg);
-    color: var(--text-color);
-    padding: 2rem 1rem;
-    text-align: center;
-}
+      body.dark-mode #theme-label {
+        content: "🌙";
+      }
+
+      header {
+        background-color: var(--header-footer-bg);
+        color: var(--text-color);
+        padding: 2rem 1rem;
+        text-align: center;
+      }
 
       header h1 {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Baloo Bhaijaan 2", cursive;
         font-size: 2.5rem;
         letter-spacing: 2px;
       }
@@ -136,12 +137,13 @@ header {
         gap: 2rem;
       }
 
-.podcast {
-    background-color: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--card-shadow);
-}
+      .podcast {
+        background-color: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px var(--card-shadow);
+        transition: color 0.5s;
+      }
 
       .podcast img {
         width: 100%;
@@ -151,15 +153,17 @@ header {
       }
 
       .podcast h2 {
-        font-family: "Montserrat", sans-serif;
+  font-family: "Baloo Bhaijaan 2", cursive;
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
-        color: #2e8b57;
+        color: var(--text-color);
+        transition: color 0.5s;
       }
 
       .podcast p {
         margin-bottom: 1rem;
-        color: #555;
+        color: var(--text-color);
+        transition: color 0.5s;
       }
 
       audio {
@@ -187,13 +191,13 @@ header {
       }
 
       /* Footer */
-footer {
-    background-color: var(--header-footer-bg);
-    color: var(--text-color);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-}
+      footer {
+        background-color: var(--header-footer-bg);
+        color: var(--text-color);
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+      }
 
       footer p {
         font-size: 0.9rem;
@@ -203,10 +207,10 @@ footer {
   <body>
     <header>
       <h1>hipertexto</h1>
-      <p>Exploring Ideas Through Sound</p>
+      <p>Multimodal exploration of ideas</p>
       <div class="theme-toggle">
         <label class="switch">
-          <input type="checkbox" id="theme-switch">
+          <input type="checkbox" id="theme-switch" />
           <span class="slider round"></span>
         </label>
         <span id="theme-label">🌞</span>
@@ -227,10 +231,7 @@ footer {
             its creation.
           </p>
           <audio controls>
-            <source
-              src="audio/episode1.mp3"
-              type="audio/mpeg"
-            />
+            <source src="audio/episode1.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -246,10 +247,7 @@ footer {
             podcast episodes.
           </p>
           <audio controls>
-            <source
-              src="audio/episode2.mp3"
-              type="audio/mpeg"
-            />
+            <source src="audio/episode2.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -341,27 +339,27 @@ footer {
       <p>&copy; 2024 hipertexto. All rights reserved.</p>
     </footer>
     <script>
-    const themeSwitch = document.getElementById('theme-switch');
-    const themeLabel = document.getElementById('theme-label');
+      const themeSwitch = document.getElementById("theme-switch");
+      const themeLabel = document.getElementById("theme-label");
 
-    // Verifica se o usuário já selecionou um tema anteriormente
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
+      // Verifica se o usuário já selecionou um tema anteriormente
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
         themeSwitch.checked = true;
-        themeLabel.textContent = '🌙';
-    }
+        themeLabel.textContent = "🌙";
+      }
 
-    themeSwitch.addEventListener('change', function() {
+      themeSwitch.addEventListener("change", function () {
         if (this.checked) {
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-            themeLabel.textContent = '🌙';
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+          themeLabel.textContent = "🌙";
         } else {
-            document.body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-            themeLabel.textContent = '🌞';
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+          themeLabel.textContent = "🌞";
         }
-    });
-</script>
+      });
+    </script>
   </body>
 </html>
